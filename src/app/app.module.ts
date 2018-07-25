@@ -15,6 +15,10 @@ import { IntroPageModule } from '../pages/intro/intro.module';
 import { HttpModule } from '@angular/http'
 import { HttpClientModule } from '@angular/common/http';
 import { MoovieProvider } from '../providers/moovie/moovie';
+import { ConfigProvider } from '../providers/config/config';
+import { ConfiguracaoPageModule } from '../pages/configuracao/configuracao.module';
+import { SobrePageModule } from '../pages/sobre/sobre.module';
+import { PerfilPageModule } from '../pages/perfil/perfil.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { MoovieProvider } from '../providers/moovie/moovie';
     FeedPageModule,
     IntroPageModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    ConfiguracaoPageModule,
+    SobrePageModule,
+    PerfilPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,13 +45,14 @@ import { MoovieProvider } from '../providers/moovie/moovie';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage    
+    TabsPage   
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MoovieProvider
+    MoovieProvider,
+    ConfigProvider    
   ]
 })
 export class AppModule {}
