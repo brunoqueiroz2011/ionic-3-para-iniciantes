@@ -83,4 +83,5 @@
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
     <allow-navigation href="http://192.168.0.105:8100" />
     <engine name="ios" spec="4.5.4" />
+    <plugin name="cordova-plugin-camera" spec="^4.0.3" />
 </widget>

@@ -17,5 +17,9 @@
 
 
 <ion-content padding>
-Essa é a página de Perfil!!!
+
+  <img *ngIf="img" [src]="img">
+
+  <button ion-button block (click)="tirarFoto()">Tirar Foto</button>
+
 </ion-content>

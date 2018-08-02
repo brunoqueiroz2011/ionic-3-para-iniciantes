@@ -19,6 +19,7 @@ import { ConfigProvider } from '../providers/config/config';
 import { ConfiguracaoPageModule } from '../pages/configuracao/configuracao.module';
 import { SobrePageModule } from '../pages/sobre/sobre.module';
 import { PerfilPageModule } from '../pages/perfil/perfil.module';
+import { FilmesDetalhesPageModule } from '../pages/filmes-detalhes/filmes-detalhes.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PerfilPageModule } from '../pages/perfil/perfil.module';
     HttpClientModule,
     ConfiguracaoPageModule,
     SobrePageModule,
-    PerfilPageModule
+    PerfilPageModule,
+    FilmesDetalhesPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

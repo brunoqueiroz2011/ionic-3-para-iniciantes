@@ -11,7 +11,7 @@ import { Injectable } from '@angular/core';
 export class MoovieProvider {
 
   private baseApiPath = "https://api.themoviedb.org/3";
-  private apiKey = "?api_key=0da7710767120bfcdb988618c134d897"
+  private apiKey = "api_key=0da7710767120bfcdb988618c134d897"
   public basePathImg = "https://image.tmdb.org/t/p/w300/";
 
 
@@ -23,8 +23,12 @@ export class MoovieProvider {
     return this.http.get(this.baseApiPath + "/movie/latest"+this.apiKey);
   }
 
-  getPopularMovies(){
-    return this.http.get(this.baseApiPath + "/movie/popular"+this.apiKey);
+  getMoviesDeteils(filmesId){
+    return this.http.get(this.baseApiPath + `/movie/${filmesId}?`+this.apiKey);
+  }
+
+  getPopularMovies(page = 1){
+    return this.http.get(this.baseApiPath + `/movie/popular?page=${page}&`+this.apiKey);
   }
 
 }
